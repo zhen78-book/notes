@@ -1,0 +1,103 @@
+
+* Chapter 2
+** starter kit
+https://github.com/purcell/emacs.d
+https://github.com/bbatsov/prelude
+** ~/.emacs.d/init.el
+
+* Chapter 3
+** emacs -q : not load init file
+** client/server
+
+emacs --daemon
+emacsclient -c
+C-x # : kill client
+
+** switch caplock and ctrl-R
+
+xmodmap
+
+** universal argument : pass argument for function
+
+C-u : 4 ...
+C-u C-u : 16 ...
+C-0 ~ C-9 : digital argument
+C- -/M- -/C-M- - : negative argument
+
+** C-x 8 C-h : some key for special symbols
+
+** Customize ?
+
+** evaluate init file
+
+restart emacs
+M-x eval-buffer
+M-x eval-region
+
+** package manager
+
+** Get help
+
+*** info (C-h i)
+*** Apropos
+
+C-h a: apropos command with regex string
+M-x apropos: apropos all
+*** Describe system
+
+C-h m : describe current mode
+C-h f : describe function
+C-h v : describe variable
+C-h k : describe key binding
+
+* Chapter 4
+** M-x ido-mode : interactive do things
+http://www.masteringemacs.org/article/introduction-to-ido-mode
+
+** undo ring
+** window manage
+
+C-x 0
+C-x 1
+C-x 2
+C-x 3
+C-x o
+
+*** winner mode: M-x winner-mode (undo/redo window manage)
+*** work with other window
+
+C-x 4 C-f
+C-x 4 d : dired
+C-x 4 C-o: display buffer
+C-x 4 b : switch buffer
+C-x 4 0 : kill buffer and window
+C-x 4 C-h
+
+*** frame ?
+*** elemental movement
+
+M-m : move to first non-whitespace char on this line
+
+*** word move
+
+M-x subword-mode: CamelCase as distince words
+M-x superword-mode: snake_case as one word
+
+*** balanced expression (S-expr) move
+
+C-M-f/C-M-b
+C-M-d : move down into a list (balanced expr)
+C-M-u : move up out of a list
+C-M-n/C-M-p
+
+*** other move
+
+paragraph move: M-{ / M-}
+sentence move: M-a / M-e
+defun move: C-M-a / C-M-e
+
+*** scrolling: 
+
+C-v / M-v
+C-M-v / C-M-S-v (C-M-- C-M-v): in other window
+M-< / M-> : begin/end (C-u C-<space> to go back)
